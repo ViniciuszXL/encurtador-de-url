@@ -2,11 +2,11 @@
 
 html {
 	position: relative;
-  height: 100%;
+  	height: 100%;
 }
 
 * {
-  margin: 0;
+  	margin: 0;
 	padding: 0;
 	border: none;
 	outline: none;
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-color:#323232;
+  	background-color:#ffffff;
 	font-family: Poppins!important;
 	color: black!important;
 	width: 100%;
@@ -32,4 +32,23 @@ a {
 	float: left;
 	width: 100%;
 	padding: 3% 4%;
+	text-align: center;
+}
+
+/* BUTTON */
+button {
+	font-family: 'Poppins', sans-serif!important;
+	cursor: pointer;
+}
+
+/* FORM */
+input {
+	font-family: 'Poppins', sans-serif;
+	padding: 2%;
+	font-size: 10px;
+	width: 100%;
+}
+
+input::placeholder {
+	font-family: 'Poppins', sans-serif!important;
 }
