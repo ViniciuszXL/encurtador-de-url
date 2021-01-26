@@ -1,0 +1,14 @@
+footer {
+    padding: 3%;
+    width: 100%;
+    float: left;
+}
+
+/* CRÉDITOS */
+.footer-credits {
+    padding: 0;
+}
+
+.footer-credits p {
+    font-size: 10px;
+}

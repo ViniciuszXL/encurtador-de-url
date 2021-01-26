@@ -1,0 +1,44 @@
+.shorterrank {
+    background: black
+}
+
+/* TITLE */
+.shorterrank-title h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* CONTENTS */
+.shorterrank-contents {
+    color: white;
+    padding: 0;
+}
+
+/* CONTENT */
+.shorterrank-content {
+    padding: 0;
+    border-bottom: 1px solid white;
+    margin: 2.5% 5%;
+    width: 90%;
+}
+
+.shorterrank-content:last-child {
+    border: none;
+}
+
+.shorterrank-content p {
+    font-size: 10px;
+    float: left;
+}
+.shorterrank-content span {
+    font-size: 10px;
+    float: right;
+}
+
+/* RANK */
+.shorterrank-rank {
+    padding: 0;
+    width: 5%;
+    font-size: 10px;
+}

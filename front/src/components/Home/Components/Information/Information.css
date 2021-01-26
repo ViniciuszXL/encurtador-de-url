@@ -1,0 +1,18 @@
+.information-content {
+    box-shadow: 0 0 2px black;
+    border-radius: 5px;
+    padding: 25px 2.5%;
+
+    margin: 2%;
+    width: 46%;
+    height: 156px;
+}
+
+.information-content i {
+    font-size: 32.5px;
+    padding: 10px 0;
+}
+
+.information-content p {
+    font-size: 12.5px;
+}
