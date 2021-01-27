@@ -15,9 +15,6 @@ function Header() {
 
     return (
         <div className="container header">
-            <button onClick={ pageUp } className="container header-menu">
-                <i className="fas fa-bars"></i>
-            </button>
             <div className="container header-img">
                 <img src={logo} /> 
             </div>

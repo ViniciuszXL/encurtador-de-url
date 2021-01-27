@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // CSS //
 import './Information.css';
 
+// Utilitaries //
+import { httpGet } from '../../../../utilitaries/Utilitaries';
+
 function Information() {
+
+    const [totalRedirects, setTotalRedirects] = useState(0);
+    const [total, setTotal] = useState(0);
+
+    const getInformations = async () => {
+        const query = await httpGet('get');
+        const data = query['data'];
+        if (!data['success']) {
+            return;
+        }
+
+        setTotal(data['total']);
+        setTotalRedirects(data['totalRedirects']);
+    };
+
+    useEffect(() => getInformations(), []);
+
     return (
         <div className="container information">
             <div className="container information-content">
                 <i className="fas fa-link" />
-                <p>Conosco, já foram encurtados 5.000.000 de urls!</p>
+                <p>Conosco, já foram encurtados { total } urls!</p>
             </div>
             <div className="container information-content">
                 <i className="fas fa-route" />
-                <p>Redirecionamos um total de 15.000.000 vezes às urls originais</p>
+                <p>Redirecionamos um total de { totalRedirects } vezes!</p>
             </div>
             <div className="container information-content">
                 <i className="fas fa-route" />

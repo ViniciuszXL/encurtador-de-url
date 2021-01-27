@@ -1,0 +1,50 @@
+# Versão do compose
+version: '3'
+
+# Volumes
+volumes:
+  mongo-data:
+
+# Redes
+networks:
+  banco:
+  web:
+
+# Serviços
+services:
+  # Mongo
+  mongo:
+    image: mongo
+    volumes:
+      # Volumes dos dados
+      - mongo-data:/data/db
+    networks:
+      - banco
+  
+  # Front-end
+  front:
+    image: nginx
+    volumes:
+      # Site
+      - ./front/build:/usr/share/nginx/html/
+      # Configuração do proxy reverso
+      - ./front/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+    networks:
+      - web
+    depends_on:
+      - api
+
+  # Aplicação
+  api:
+    image: node
+    volumes:
+      - ./api:/api
+    working_dir: /api
+    command: bash ./api.sh
+    depends_on: 
+      - mongo
+    networks:
+      - banco
+      - web

@@ -52,3 +52,12 @@ input {
 input::placeholder {
 	font-family: 'Poppins', sans-serif!important;
 }
+
+/* MEDIA SCREEN */
+@media screen and (min-width: 1024px) {
+
+	.container {
+		padding: 3%;
+	}
+
+}

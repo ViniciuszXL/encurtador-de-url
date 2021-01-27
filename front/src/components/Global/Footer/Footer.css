@@ -12,3 +12,14 @@ footer {
 .footer-credits p {
     font-size: 10px;
 }
+
+/* MEDIA SCREEN */
+@media screen and (min-width: 1024px) {
+    footer {
+        padding: 1.5% 1%;
+    }
+
+    .footer-credits p {
+        font-size: 15px;
+    }
+}
